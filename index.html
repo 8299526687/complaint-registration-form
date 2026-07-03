@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ResolveCare | Dashboard</title>
+    <!-- Meta Descriptions for SEO -->
+    <meta name="description" content="Manage, search, and register civic complaints in one unified, real-time responsive dashboard. Powered by local storage.">
+    <!-- Google Fonts Preconnect -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- Custom Style Sheet -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- Header & Navigation Bar -->
+    <header>
+        <nav class="navbar">
+            <div class="container navbar-container">
+                <a href="index.html" class="logo-link">
+                    <!-- Glassy SVG Icon -->
+                    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="url(#logo-gradient)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                        <defs>
+                            <linearGradient id="logo-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" stop-color="#6366f1"/>
+                                <stop offset="50%" stop-color="#8b5cf6"/>
+                                <stop offset="100%" stop-color="#d946ef"/>
+                            </linearGradient>
+                        </defs>
+                        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                    </svg>
+                    <span class="logo-text">ResolveCare</span>
+                </a>
+                <ul class="nav-menu">
+                    <li><a href="index.html" class="nav-link active" id="nav-dashboard">Dashboard</a></li>
+                    <li><a href="register.html" class="nav-link" id="nav-file-complaint">File Complaint</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content Area -->
+    <main>
+        <div class="container">
+            <!-- Hero Introduction -->
+            <section class="hero">
+                <h1>Civic Action Hub</h1>
+                <p>Monitor, query, and manage registered complaints. Click "File Complaint" to log an issue.</p>
+            </section>
+
+            <!-- Search and Action Control Bar -->
+            <section class="controls-bar">
+                <div class="search-wrapper">
+                    <!-- Search SVG Icon -->
+                    <span class="search-icon">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="11" cy="11" r="8"></circle>
+                            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                        </svg>
+                    </span>
+                    <input type="text" id="search-complaints" class="search-input" placeholder="Search by name, city or details..." aria-label="Search complaints">
+                </div>
+                
+                <a href="register.html" class="btn-primary" id="btn-add-complaint">
+                    <!-- Plus SVG Icon -->
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                        <line x1="12" y1="5" x2="12" y2="19"></line>
+                        <line x1="5" y1="12" x2="19" y2="12"></line>
+                    </svg>
+                    File a Complaint
+                </a>
+            </section>
+
+            <!-- Dynamically populated complaints grid -->
+            <section id="complaints-grid" class="complaints-grid">
+                <!-- Complaints cards will be dynamically injected here by JS -->
+            </section>
+        </div>
+    </main>
+
+    <!-- Global Footer -->
+    <footer>
+        <div class="container footer-container">
+            <span class="footer-brand">ResolveCare</span>
+            <span class="footer-text">&copy; 2026 ResolveCare Portal. Handcrafted for seamless civic complaints administration.</span>
+        </div>
+    </footer>
+
+    <!-- App Logic -->
+    <script src="js/app.js"></script>
+</body>
+</html>

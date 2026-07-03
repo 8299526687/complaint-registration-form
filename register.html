@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ResolveCare | Register Complaint</title>
+    <!-- Meta Descriptions for SEO -->
+    <meta name="description" content="File a new civic complaint. Input details including your name, city, phone number and details to store securely in local storage.">
+    <!-- Google Fonts Preconnect -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- Custom Style Sheet -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- Header & Navigation Bar -->
+    <header>
+        <nav class="navbar">
+            <div class="container navbar-container">
+                <a href="index.html" class="logo-link">
+                    <!-- Glassy SVG Icon -->
+                    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="url(#logo-gradient)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                        <defs>
+                            <linearGradient id="logo-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" stop-color="#6366f1"/>
+                                <stop offset="50%" stop-color="#8b5cf6"/>
+                                <stop offset="100%" stop-color="#d946ef"/>
+                            </linearGradient>
+                        </defs>
+                        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                    </svg>
+                    <span class="logo-text">ResolveCare</span>
+                </a>
+                <ul class="nav-menu">
+                    <li><a href="index.html" class="nav-link" id="nav-dashboard">Dashboard</a></li>
+                    <li><a href="register.html" class="nav-link active" id="nav-file-complaint">File Complaint</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content Area -->
+    <main>
+        <div class="container">
+            <div class="form-container glass-card animated-fade">
+                <h1 class="form-title">File a Complaint</h1>
+                <p class="form-subtitle">Fill in the fields below to submit your complaint. All entries are stored locally on your device.</p>
+                
+                <form id="complaint-form" novalidate autocomplete="off">
+                    <!-- Name Field -->
+                    <div class="form-group">
+                        <label for="name" class="form-label">Full Name</label>
+                        <input type="text" id="name" class="form-input" required placeholder="John Doe" aria-required="true">
+                    </div>
+
+                    <!-- City Field -->
+                    <div class="form-group">
+                        <label for="city" class="form-label">City</label>
+                        <input type="text" id="city" class="form-input" required placeholder="New York" aria-required="true">
+                    </div>
+
+                    <!-- Mobile Number Field -->
+                    <div class="form-group">
+                        <label for="mobile" class="form-label">Mobile Number</label>
+                        <input type="tel" id="mobile" class="form-input" required pattern="[0-9]{10}" placeholder="1234567890" aria-required="true" maxlength="10">
+                    </div>
+
+                    <!-- Complaint Details Field -->
+                    <div class="form-group">
+                        <label for="complaint" class="form-label">Complaint Details</label>
+                        <textarea id="complaint" class="form-textarea" required placeholder="Please describe the issue in detail (minimum 10 characters)..." aria-required="true" minlength="10"></textarea>
+                    </div>
+
+                    <!-- Form Action buttons -->
+                    <div class="form-actions">
+                        <a href="index.html" class="btn-secondary" id="btn-cancel">Cancel</a>
+                        <button type="submit" class="btn-primary btn-submit" id="btn-submit-complaint">Submit Complaint</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <!-- Global Footer -->
+    <footer>
+        <div class="container footer-container">
+            <span class="footer-brand">ResolveCare</span>
+            <span class="footer-text">&copy; 2026 ResolveCare Portal. Handcrafted for seamless civic complaints administration.</span>
+        </div>
+    </footer>
+
+    <!-- App Logic -->
+    <script src="js/app.js"></script>
+</body>
+</html>
